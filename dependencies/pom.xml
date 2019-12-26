@@ -77,31 +77,26 @@
           </exclusion>
         </exclusions>
       </dependency>
-
-<!--      <dependency>-->
-<!--        <groupId>org.apache.dubbo</groupId>-->
-<!--        <artifactId>dubbo-spring-boot-starter</artifactId>-->
-<!--        <version>${dubbo.version}</version>-->
-<!--      </dependency>-->
-
+      <dependency>
+        <groupId>org.apache.dubbo</groupId>
+        <artifactId>dubbo-spring-boot-starter</artifactId>
+        <version>${dubbo.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.apache.dubbo</groupId>
         <artifactId>dubbo-registry-nacos</artifactId>
         <version>${dubbo.version}</version>
       </dependency>
-
       <dependency>
         <groupId>com.alibaba.nacos</groupId>
         <artifactId>nacos-client</artifactId>
         <version>${dubbo-nacos.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.apache.dubbo</groupId>
         <artifactId>dubbo-spring-boot-actuator</artifactId>
         <version>${dubbo.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.apache.dubbo</groupId>
         <artifactId>dubbo-serialization-kryo</artifactId>
@@ -117,11 +112,17 @@
           </exclusion>
         </exclusions>
       </dependency>
-
       <dependency>
         <groupId>com.alibaba.spring</groupId>
         <artifactId>spring-context-support</artifactId>
         <version>${alibaba-spring-context-support.version}</version>
+      </dependency>
+
+      <!-- MySql -->
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.version}</version>
       </dependency>
 
       <!-- MybatisPlus -->
@@ -148,12 +149,6 @@
         <version>${HikariCP.version}</version>
       </dependency>
 
-      <!-- MySql -->
-      <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-        <version>${mysql.version}</version>
-      </dependency>
     </dependencies>
   </dependencyManagement>
 
