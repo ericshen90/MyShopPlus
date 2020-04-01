@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
     <groupId>com.eric.myshop.plus</groupId>
     <artifactId>parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>provider</artifactId>
+  <artifactId>commons</artifactId>
   <packaging>pom</packaging>
   <url>http://ericshen.coding.me</url>
-  <inceptionYear>2019-Now</inceptionYear>
+  <inceptionYear>2020-Now</inceptionYear>
 
   <licenses>
     <license>
@@ -31,7 +29,6 @@
   </developers>
 
   <modules>
-    <module>provider-admin-service</module>
-    <module>provider-admin-api</module>
+    <module>commons-dto</module>
   </modules>
 </project>

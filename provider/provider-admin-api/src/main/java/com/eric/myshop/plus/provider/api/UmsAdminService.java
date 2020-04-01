@@ -1,4 +1,4 @@
-package com.eric.myshop.plus.provider.service;
+package com.eric.myshop.plus.provider.api;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.eric.myshop.plus.provider.entity.UmsAdmin;
@@ -12,5 +12,11 @@ import com.eric.myshop.plus.provider.entity.UmsAdmin;
  * @since 2019-12-25
  */
 public interface UmsAdminService extends IService<UmsAdmin> {
+
+  Boolean addUmsAdmin(UmsAdmin umsAdmin);
+
+  UmsAdmin get(String username);
+
+  UmsAdmin get(UmsAdmin umsAdmin);
 
 }

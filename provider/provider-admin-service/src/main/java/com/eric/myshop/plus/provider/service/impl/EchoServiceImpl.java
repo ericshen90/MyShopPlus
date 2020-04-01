@@ -1,4 +1,4 @@
-package com.eric.myshop.plus.provider.service;
+package com.eric.myshop.plus.provider.service.impl;
 
 import com.eric.myshop.plus.provider.api.EchoService;
 import org.apache.dubbo.config.annotation.Service;

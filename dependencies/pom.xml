@@ -11,14 +11,14 @@
   <url>http://ericshen.coding.me</url>
 
   <properties>
-    <dubbo.version>2.7.4.1</dubbo.version>
-    <dubbo-nacos.version>1.1.4</dubbo-nacos.version>
-    <spring-cloud.version>Greenwich.SR4</spring-cloud.version>
+    <dubbo.version>2.7.5</dubbo.version>
+    <dubbo-nacos.version>1.2.0</dubbo-nacos.version>
+    <spring-cloud.version>Greenwich.SR5</spring-cloud.version>
     <spring-cloud-alibaba.version>2.1.1.RELEASE</spring-cloud-alibaba.version>
-    <alibaba-spring-context-support.version>1.0.5</alibaba-spring-context-support.version>
-    <mybatis-plus.version>3.3.0</mybatis-plus.version>
-    <velocity-engine-core.version>2.1</velocity-engine-core.version>
-    <HikariCP.version>3.4.1</HikariCP.version>
+    <alibaba-spring-context-support.version>1.0.6</alibaba-spring-context-support.version>
+    <mybatis-plus.version>3.3.1</mybatis-plus.version>
+    <velocity-engine-core.version>2.2</velocity-engine-core.version>
+    <HikariCP.version>3.4.2</HikariCP.version>
     <mysql.version>5.1.48</mysql.version>
   </properties>
 
@@ -39,6 +39,19 @@
 
   <dependencyManagement>
     <dependencies>
+      <!--Spring Boot-->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-jdbc</artifactId>
+        <exclusions>
+          <!-- 排除 tomcat-jdbc 以使用 HikariCP -->
+          <exclusion>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jdbc</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
       <!--Spring Cloud-->
       <dependency>
         <groupId>org.springframework.cloud</groupId>
@@ -152,41 +165,41 @@
     </dependencies>
   </dependencyManagement>
 
-  <repositories>
-    <repository>
-      <id>spring-milestone</id>
-      <name>Spring Milestone</name>
-      <url>https://repo.spring.io/milestone</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>spring-snapshot</id>
-      <name>Spring Snapshot</name>
-      <url>https://repo.spring.io/snapshot</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
+  <!--  <repositories>-->
+  <!--    <repository>-->
+  <!--      <id>spring-milestone</id>-->
+  <!--      <name>Spring Milestone</name>-->
+  <!--      <url>https://repo.spring.io/milestone</url>-->
+  <!--      <snapshots>-->
+  <!--        <enabled>false</enabled>-->
+  <!--      </snapshots>-->
+  <!--    </repository>-->
+  <!--    <repository>-->
+  <!--      <id>spring-snapshot</id>-->
+  <!--      <name>Spring Snapshot</name>-->
+  <!--      <url>https://repo.spring.io/snapshot</url>-->
+  <!--      <snapshots>-->
+  <!--        <enabled>true</enabled>-->
+  <!--      </snapshots>-->
+  <!--    </repository>-->
+  <!--  </repositories>-->
 
-  <pluginRepositories>
-    <pluginRepository>
-      <id>spring-milestone</id>
-      <name>Spring Milestone</name>
-      <url>https://repo.spring.io/milestone</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </pluginRepository>
-    <pluginRepository>
-      <id>spring-snapshot</id>
-      <name>Spring Snapshot</name>
-      <url>https://repo.spring.io/snapshot</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>
+  <!--  <pluginRepositories>-->
+  <!--    <pluginRepository>-->
+  <!--      <id>spring-milestone</id>-->
+  <!--      <name>Spring Milestone</name>-->
+  <!--      <url>https://repo.spring.io/milestone</url>-->
+  <!--      <snapshots>-->
+  <!--        <enabled>false</enabled>-->
+  <!--      </snapshots>-->
+  <!--    </pluginRepository>-->
+  <!--    <pluginRepository>-->
+  <!--      <id>spring-snapshot</id>-->
+  <!--      <name>Spring Snapshot</name>-->
+  <!--      <url>https://repo.spring.io/snapshot</url>-->
+  <!--      <snapshots>-->
+  <!--        <enabled>true</enabled>-->
+  <!--      </snapshots>-->
+  <!--    </pluginRepository>-->
+  <!--  </pluginRepositories>-->
 </project>
